@@ -1,5 +1,6 @@
 import * as path from "path";
 import * as fs from "fs";
+import * as vscode from "vscode";
 import { removeFirstLine } from "./removeFirstLine";
 
 export const createComponentToString = async (
@@ -18,7 +19,7 @@ export const createComponentToString = async (
     const withFirstLineRemoved = removeFirstLine(parsedFile.toString());
     result = withFirstLineRemoved.replaceAll("ComponentName", componentName);
   } catch (e) {
-    console.log(e);
+    vscode.window.showErrorMessage(JSON.stringify(e));
   }
 
   return result;

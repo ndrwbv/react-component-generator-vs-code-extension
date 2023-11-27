@@ -38,11 +38,13 @@ export const createReactComponentFolder = async (rootFolderPath: string) => {
   );
 
   await writeFile(indexFileData, "index.ts", componentFolder);
+
   await writeFile(
     reactComponentFileData,
     `${componentName}.tsx`,
     componentFolder
   );
+
   await writeFile(
     styledFileData,
     `${componentName}.styles.tsx`,

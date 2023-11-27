@@ -1,8 +1,8 @@
 {
   "name": "ndrwbv-component-generator",
-  "displayName": "React/Styled/Story component generator",
-  "description": "",
-  "version": "0.0.1",
+  "displayName": "React / Styled / Story component generator",
+  "description": "Generate React components",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.84.0"
   },
@@ -15,6 +15,8 @@
     "Snippets",
     "Other"
   ],
+  "icon": "assets/images/icon.png",
+  "license": "MIT",
   "keywords": [
     "Folder Structure Generator",
     "Component Directory",

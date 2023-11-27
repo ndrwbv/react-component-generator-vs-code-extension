@@ -1,5 +1,6 @@
 import * as path from "path";
 import * as fs from "fs";
+import * as vscode from "vscode";
 
 export const writeFile = async (
   content: string,
@@ -9,7 +10,7 @@ export const writeFile = async (
   try {
     fs.promises.writeFile(path.join(folderPath, fileName), content);
   } catch (e) {
-    console.error(e);
+    vscode.window.showErrorMessage(JSON.stringify(e));
   }
 
   return null;
