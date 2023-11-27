@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
 import { createReactComponentFolder } from "./features/createReactStyledFolder/createReactStyledFolder";
 import { createStory } from "./features/createStory/createStory";
+import { createRTKSlice } from "./features/createRTKSlice/createRTKSlice";
 
 enum ALL_COMMAND {
   createReactStyledFolder = "extension.createReactStyledFolder",
@@ -32,6 +33,8 @@ const resolveCommand = (commandId: string, rootFolderPath: string) => {
     case ALL_COMMAND.createStory:
       return createStory(rootFolderPath);
 
+    case ALL_COMMAND.createRTKSlice:
+      return createRTKSlice(rootFolderPath);
   }
 
   return;
