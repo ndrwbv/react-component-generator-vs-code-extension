@@ -15,7 +15,7 @@
     "commands": [
       {
         "command": "extension.createReactStyledFolder",
-        "title": "New React Styled component"
+        "title": "New React folder"
       },
       {
         "command": "extension.createSingleReactComponent",
@@ -26,8 +26,8 @@
         "title": "New RTK slice"
       },
       {
-        "command": "extension.createStoryFolder",
-        "title": "New Story folder"
+        "command": "extension.createStory",
+        "title": "New Story"
       }
     ],
     "menus": {
@@ -43,6 +43,10 @@
         {
           "command": "extension.createRTKSlice",
           "group": "reactGroup@3"
+        },
+        {
+          "command": "extension.createStory",
+          "group": "reactGroup@4"
         }
       ]
     }

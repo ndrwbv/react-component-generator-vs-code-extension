@@ -2,13 +2,14 @@ import * as path from "path";
 import * as fs from "fs";
 import { removeFirstLine } from "./removeFirstLine";
 
-export const getFileData = async (
+export const createComponentToString = async (
+  folderName: string,
   fileName: string,
   componentName: string
 ): Promise<string> => {
   const indexPath = path.join(
     __dirname,
-    `../../../assets/templates/createReactStyledFolder/${fileName}`
+    `../../../../assets/templates/${folderName}/${fileName}`
   );
   let result = "";
 

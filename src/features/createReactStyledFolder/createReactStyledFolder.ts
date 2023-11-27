@@ -1,8 +1,8 @@
 import * as vscode from "vscode";
-import * as path from "path";
 import * as fs from "fs";
-import { getFileData } from "./helpers/getFileData";
-import { writeFile } from "./helpers/writeFile";
+import { createComponentToString } from "../../shared/utils/createComponentToString";
+import { writeFile } from "../../shared/utils/writeFile";
+import { getComponentFolder } from "../../shared/utils/getComponentFolder";
 
 export const createReactComponentFolder = async (rootFolderPath: string) => {
   const componentName = await vscode.window.showInputBox({
@@ -13,27 +13,29 @@ export const createReactComponentFolder = async (rootFolderPath: string) => {
     return;
   }
 
-  let folderPath = rootFolderPath;
+  const componentFolder = getComponentFolder(rootFolderPath, componentName);
 
-  if (!fs.lstatSync(rootFolderPath).isDirectory()) {
-    folderPath = path.dirname(rootFolderPath);
-  }
-
-  const componentFolder = path.join(folderPath, componentName);
-
-  if (fs.existsSync(componentFolder)) {
-    vscode.window.showErrorMessage(`Folder ${componentName} already exists.`);
+  if (!componentFolder) {
     return;
   }
 
   fs.mkdirSync(componentFolder);
 
-  const indexFileData = await getFileData("index.ts", componentName);
-  const reactComponentFileData = await getFileData(
-    "reactComponent.tsx",
+  const indexFileData = await createComponentToString(
+    "createReactStyledFolder",
+    "index.ts",
     componentName
   );
-  const styledFileData = await getFileData("styled.tsx", componentName);
+  const reactComponentFileData = await createComponentToString(
+    "createReactStyledFolder",
+    "ComponentName.tsx",
+    componentName
+  );
+  const styledFileData = await createComponentToString(
+    "createReactStyledFolder",
+    "ComponentName.styles.tsx",
+    componentName
+  );
 
   await writeFile(indexFileData, "index.ts", componentFolder);
   await writeFile(
