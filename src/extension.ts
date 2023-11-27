@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import { createReactComponentFolder } from "./features/createReactStyledFolder";
+import { createReactComponentFolder } from "./features/createReactStyledFolder/createReactStyledFolder";
 
 enum ALL_COMMAND {
   createReactStyledFolder = "extension.createReactStyledFolder",
