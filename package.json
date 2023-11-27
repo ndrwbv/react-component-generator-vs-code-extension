@@ -12,7 +12,15 @@
     "email": "ndrwbv@gmail.com"
   },
   "categories": [
+    "Snippets",
     "Other"
+  ],
+  "keywords": [
+    "Folder Structure Generator",
+    "Component Directory",
+    "React Snippets",
+    "Code Snippets",
+    "React Boilerplate"
   ],
   "activationEvents": [],
   "main": "./out/src/extension",
