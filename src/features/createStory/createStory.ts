@@ -24,7 +24,6 @@ export const createStory = async (rootFolderPath: string) => {
     return null;
   }
 
-  console.log(folderPath);
   const storyFileData = await createComponentToString(
     "createStory",
     "ComponentName.stories.tsx",
