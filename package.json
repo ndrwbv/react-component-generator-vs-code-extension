@@ -2,7 +2,7 @@
   "name": "ndrwbv-component-generator",
   "displayName": "React / Styled / Story component generator",
   "description": "Generate React components",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.84.0"
   },
