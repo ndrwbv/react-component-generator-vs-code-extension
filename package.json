@@ -2,9 +2,13 @@
   "name": "ndrwbv-component-generator",
   "displayName": "React / Styled / Story component generator",
   "description": "Generate React components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.84.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ndrwbv/react-component-generator-vs-code-extension.git"
   },
   "publisher": "ndrwbv",
   "author": {
@@ -16,6 +20,10 @@
     "Other"
   ],
   "icon": "assets/images/icon.png",
+  "galleryBanner": {
+    "color": "#503628",
+    "theme": "dark"
+  },
   "license": "MIT",
   "keywords": [
     "Folder Structure Generator",
@@ -66,14 +74,15 @@
       ]
     }
   },
-
   "scripts": {
     "vscode:prepublish": "yarn run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "yarn run compile && yarn run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package --no-yarn",
+    "vpublish": " vsce publish --no-yarn"
   },
   "devDependencies": {
     "@types/vscode": "^1.84.0",
