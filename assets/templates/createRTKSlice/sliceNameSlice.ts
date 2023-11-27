@@ -1,16 +1,16 @@
 // @ts-nocheck
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface commentsState {
+interface ComponentNameState {
 	data: number;
 }
 
-const initialState: commentsState = {
+const initialState: ComponentNameState = {
 	data: 1,
 };
 
-export const commentsSlice = createSlice({
-	name: `comments`,
+export const ComponentNameSlice = createSlice({
+	name: `ComponentName`,
 	initialState,
 	reducers: {
 		action: (state, action: PayloadAction<number>) => {
@@ -19,6 +19,6 @@ export const commentsSlice = createSlice({
 	},
 });
 
-export const dataSelector = (state: IRootState): number => state.comments.data;
+export const dataSelector = (state: IRootState): number => state.ComponentName.data;
 
-export const { action } = commentsSlice.actions;
+export const { action } = ComponentNameSlice.actions;
