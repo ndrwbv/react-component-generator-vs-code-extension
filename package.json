@@ -24,6 +24,10 @@
       {
         "command": "extension.createRTKSlice",
         "title": "New RTK slice"
+      },
+      {
+        "command": "extension.createStoryFolder",
+        "title": "New Story folder"
       }
     ],
     "menus": {

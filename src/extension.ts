@@ -5,6 +5,7 @@ enum ALL_COMMAND {
   createReactStyledFolder = "extension.createReactStyledFolder",
   createSingleReactComponent = "extension.createSingleReactComponent",
   createRTKSlice = "extension.createRTKSlice",
+  createStoryFolder = "extension.createStoryFolder",
 }
 
 const ALL_COMMAND_LIST = [
@@ -16,6 +17,9 @@ const ALL_COMMAND_LIST = [
   },
   {
     id: ALL_COMMAND.createRTKSlice,
+  },
+  {
+    id: ALL_COMMAND.createStoryFolder,
   },
 ];
 
