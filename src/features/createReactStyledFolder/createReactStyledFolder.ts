@@ -23,11 +23,6 @@ export const createReactComponentFolder = async (rootFolderPath: string) => {
 
   const templateFolder = "createReactStyledFolder";
 
-  const index2FileData = await createComponentToString(
-    templateFolder,
-    "index.tsx",
-    componentName
-  );
   const reactComponentFileData = await createComponentToString(
     templateFolder,
     "ComponentName.tsx",
@@ -38,8 +33,6 @@ export const createReactComponentFolder = async (rootFolderPath: string) => {
     "ComponentName.styles.tsx",
     componentName
   );
-
-  await writeFile(index2FileData, "index.ts", componentFolder);
 
   await writeFile(
     reactComponentFileData,

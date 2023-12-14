@@ -5,8 +5,7 @@ Creates folder structure:
 ```
 └── ComponentName/
     ├── ComponentName.tsx
-    ├── ComponentName.styled.tsx
-    └── index.ts
+    ├── ComponentName.styles.tsx
 ```
 
 ### Create RTK Slice
