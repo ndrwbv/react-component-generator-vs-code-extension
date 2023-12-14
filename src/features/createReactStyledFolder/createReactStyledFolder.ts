@@ -30,7 +30,7 @@ export const createReactComponentFolder = async (rootFolderPath: string) => {
   );
   const styledFileData = await createComponentToString(
     templateFolder,
-    "ComponentName.styles.ts",
+    "ComponentName.styles.tsx",
     componentName
   );
 
